@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Messages</title>
+</head>
+<body>
+    <header>
+        <h1>All Messages</h1>
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/send_message">Submit a Message</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Messages</h2>
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>
+                        <p><strong>{{ message.timestamp }}</strong>: {{ message.msg }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No messages yet. Be the first to submit one!</p>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>Message Board &copy; 2024</p>
+    </footer>
+</body>
+</html>

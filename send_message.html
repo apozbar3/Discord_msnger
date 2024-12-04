@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Message</title>
+</head>
+<body>
+    <header>
+        <h1>Submit a New Message</h1>
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="/display_message">View All Messages</a>
+        </nav>
+    </header>
+
+    <section>
+        <form action="/send_message" method="POST">
+            <label for="msg">Message:</label><br>
+            <textarea id="msg" name="massage" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Submit Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Message Board &copy; 2024</p>
+    </footer>
+</body>
+</html>
